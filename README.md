@@ -1,6 +1,10 @@
 # 🏛️ Polis Tecnologia  
 **Tecnologia a serviço da gestão pública**
 
+<p align="center">
+  <img src="public/logo-polis.png" alt="Polis Tecnologia" width="72" />
+</p>
+
 Plataforma digital para **controle, transparência e eficiência** na gestão de contratos públicos, desenvolvida com foco em desempenho, acessibilidade e experiência do usuário.
 
 ---
