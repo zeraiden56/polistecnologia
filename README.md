@@ -53,17 +53,17 @@ public/
 ---
 
 ## ▶️ Como Rodar o Projeto
-
+```bash
 npm install  
 npm run dev
-
+```
 ---
 
 ## 🏗️ Build para Produção
-
+```bash
 npm run build  
 npm run preview
-
+```
 ---
 
 ## ✨ Funcionalidades
