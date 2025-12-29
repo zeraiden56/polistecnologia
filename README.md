@@ -49,6 +49,8 @@ public/
 ├── polisfavico.ico
 └── index.html
 
+---
+
 ## ▶️ Como Rodar o Projeto
 
 npm install  
