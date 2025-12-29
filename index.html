@@ -1,11 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+    <!-- Básico -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>polistecnologia</title>
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/polisfavico-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/polisfavico-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback -->
+    <link rel="icon" href="/polisfavico.ico" />
+
+    <!-- Título -->
+    <title>
+      Polis Tecnologia | Gestão de Contratos Públicos com Transparência
+    </title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Soluções inteligentes para controle, transparência e eficiência na gestão de contratos públicos."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Polis Tecnologia" />
+    <meta
+      property="og:description"
+      content="Controle e transparência na gestão de contratos públicos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/polisfavico-light.svg" />
+
+    <!-- Tema -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#1c174b" />
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
