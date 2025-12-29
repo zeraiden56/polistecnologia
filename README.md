@@ -48,6 +48,7 @@ public/
 ├── polisfavico.svg
 ├── polisfavico.ico
 └── index.html
+```
 
 ---
 
