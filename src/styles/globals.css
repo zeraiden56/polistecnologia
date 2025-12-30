@@ -1,6 +1,12 @@
+/* =========================================================
+   Tailwind base
+========================================================= */
 @import "tailwindcss";
 
-/* Fonte Gotham (se existir) */
+/* =========================================================
+   Fontes
+========================================================= */
+/* Fonte Gotham (caso exista no projeto) */
 @font-face {
   font-family: "Gotham";
   src: url("/fonts/Gotham-Light.woff2") format("woff2");
@@ -15,21 +21,44 @@
   font-style: normal;
 }
 
+/* =========================================================
+   Variáveis globais
+========================================================= */
 :root {
   --polis-blue: #1c174b;
 }
 
+/* =========================================================
+   Dark mode automático (respeita SO / navegador)
+========================================================= */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
 
+/* =========================================================
+   Base global
+========================================================= */
+html {
+  scroll-behavior: smooth; /* Scroll suave para âncoras */
+}
 
 body {
   font-family: "Gotham", Inter, system-ui, sans-serif;
 }
 
+/* =========================================================
+   Ajuste de scroll para header fixo
+   (evita conteúdo "comido" ao usar #ancoras)
+========================================================= */
+section[id] {
+  scroll-margin-top: 96px; /* altura aproximada do header */
+}
+
+/* =========================================================
+   Animações — Floating elements (background / decorativos)
+========================================================= */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -47,35 +76,32 @@ body {
   }
 }
 
+.animate-float {
+  animation: float ease-in-out infinite;
+}
+
+/* =========================================================
+   Animação — Floating suave (uso geral / ícones)
+========================================================= */
 @keyframes float-slow {
   0% {
     transform: translateY(0);
-    opacity: 0;
   }
-  30% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.6;
+  50% {
+    transform: translateY(-18px);
   }
   100% {
-    transform: translateY(-100px);
-    opacity: 0;
+    transform: translateY(0);
   }
-}
-
-.animate-float {
-  animation-name: float;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
 .animate-float-slow {
-  animation-name: float-slow;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: float-slow ease-in-out infinite;
 }
 
+/* =========================================================
+   Animação — Shooting star (efeito decorativo)
+========================================================= */
 @keyframes shooting-star {
   0% {
     opacity: 0;
@@ -94,22 +120,9 @@ body {
   animation: shooting-star linear infinite;
 }
 
-@keyframes float-slow {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-18px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.animate-float-slow {
-  animation: float-slow ease-in-out infinite;
-}
-
+/* =========================================================
+   Animação — Pulse suave (WhatsApp / CTA flutuante)
+========================================================= */
 @keyframes ping-soft {
   0% {
     transform: scale(1);
@@ -128,3 +141,21 @@ body {
   animation: ping-soft 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+/* =========================================================
+   Efeito de digitação — cursor piscando
+========================================================= */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 4px;
+  background-color: currentColor;
+  vertical-align: bottom;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

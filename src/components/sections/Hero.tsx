@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-polis.png";
 import { NetworkBackground } from "@/components/hero/NetworkBackground";
 import { NetworkCanvas } from "@/components/hero/NetworkCanvas";
+import { TypingTitle } from "@/components/hero/TypingTitle";
 
 export function Hero() {
   return (
     <section
-    id="inicio"
-    className="
+      id="inicio"
+      className="
         relative flex
         min-h-[90vh] md:min-h-screen
         items-start justify-center
@@ -16,7 +17,7 @@ export function Hero() {
         pt-36 md:pt-48
         text-center
         overflow-hidden
-    "
+      "
     >
       <NetworkBackground />
       <NetworkCanvas />
@@ -29,17 +30,16 @@ export function Hero() {
       <div className="relative z-10 max-w-5xl">
         {/* Logo */}
         <img
-        src={logo}
-        alt="Polis Tecnologia"
-        className="
+          src={logo}
+          alt="Polis Tecnologia"
+          className="
             mx-auto mb-4
             h-40 sm:h-44 md:h-56 lg:h-64 xl:h-72
             w-auto
-        "
+          "
         />
 
-
-        {/* Título */}
+        {/* Título com typing */}
         <h1
           className="
             mb-6 font-bold leading-tight
@@ -47,7 +47,7 @@ export function Hero() {
             text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
           "
         >
-          Controle, Transparência e Eficiência na Gestão de Contratos Públicos
+          <TypingTitle text="Controle, Transparência e Eficiência na Gestão de Contratos Públicos" />
         </h1>
 
         {/* Subtítulo */}
@@ -75,8 +75,9 @@ export function Hero() {
               transition-all duration-300
               shadow-md
             "
+            asChild
           >
-            Conhecer Soluções
+            <a href="#solucoes">Conhecer Soluções</a>
           </Button>
 
           <Button
